@@ -1,4 +1,4 @@
-name: gendiff_CI
+name: gendiff-CI
 
 on:
   - push
