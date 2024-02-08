@@ -27,10 +27,10 @@ jobs:
         run: make lint
 
       - name: run test
-        run: make test
+        run: poetry run pytest
 
       - name: run test coverage
-        run: make test-coverage
+        run: poetry run pytest --cov
       
       - name: test & publish code coverage
         uses: paambaati/codeclimate-action@v5.0.0

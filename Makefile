@@ -19,10 +19,4 @@ package-reinstall:
 lint:
 		poetry run flake8 gendiff
 
-test:
-		poetry run pytest
-
-test-coverage:
-		poetry run pytest --cov
-
 .PHONY: install gendiff build publish package-install package-reinstall lint test test-coverage
