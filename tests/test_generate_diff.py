@@ -3,13 +3,17 @@ import json
 from gendiff.generate_diff import generate_diff
 
 
-json_1 = '/home/kharajyan/python-project-50/tests/fixtures/file1.json'
-json_2 = '/home/kharajyan/python-project-50/tests/fixtures/file2.json'
-json_diff_result = '/home/kharajyan/python-project-50/tests/fixtures/json_diff_result.json'
+json_diff_result = 'tests/fixtures/json_diff_result.json'
 
 
-@pytest.fixture
-def test_generate_diff(json_1, json_2, json_diff_result):
-    actual = generate_diff(json_1, json_2)
-    expected_result = json.load(open(json_diff_result))
-    assert actual == expected_result
+@pytest.mark.parametrize(
+    "file1,file2,diff_result",
+    [
+        ('tests/fixtures/file1.json',
+         'tests/fixtures/file2.json',
+         json_diff_result)
+    ]
+)
+def test_generate_diff(file1, file2, diff_result):
+    with open(diff_result) as f:
+        assert generate_diff(file1, file2) == f.read()
