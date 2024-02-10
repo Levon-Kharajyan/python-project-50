@@ -27,12 +27,13 @@ jobs:
         run: make lint
 
       - name: run test
-        run: poetry run pytest
+        run: make test
       
       - name: test & publish code coverage
         uses: paambaati/codeclimate-action@v5.0.0
+        if: github.ref_name == 'main'
         env:
           CC_TEST_REPORTER_ID: ${{ secrets.CC_TEST_REPORTER_ID }}
         with:
-          coverageCommand: poetry run pytest --cov
+          coverageCommand: make test-cov
           debug: true
