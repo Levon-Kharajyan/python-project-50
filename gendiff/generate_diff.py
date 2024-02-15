@@ -1,4 +1,4 @@
-import json
+from gendiff.file_parsing import parse_file
 
 
 def convert_bool(content):
@@ -9,8 +9,8 @@ def convert_bool(content):
 
 
 def generate_diff(file1_path, file2_path):
-    file1 = json.load(open(file1_path))
-    file2 = json.load(open(file2_path))
+    file1 = parse_file(file1_path)
+    file2 = parse_file(file2_path)
     f1_keys = list(file1.keys())
     f2_keys = list(file2.keys())
     keys = sorted(list(set(f1_keys + f2_keys)))

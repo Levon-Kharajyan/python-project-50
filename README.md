@@ -8,4 +8,5 @@
 [![Test Coverage](https://api.codeclimate.com/v1/badges/12e3715dda2a81bd984a/test_coverage)](https://codeclimate.com/github/Levon-Kharajyan/python-project-50/test_coverage)
 
 ### Demo
-[Generate_diff](https://asciinema.org/a/KDzgQSAuBMzAy53r9JToR5qVL)
+[Generate_diff_json](https://asciinema.org/a/KDzgQSAuBMzAy53r9JToR5qVL)
+[Generate_diff_yaml](https://asciinema.org/a/MvDOAlwAgx5pqs8nl697QwnIP)
