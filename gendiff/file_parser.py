@@ -1,5 +1,5 @@
 import json
-from file_extension import get_file_extension
+from gendiff.file_extension import get_file_extension
 
 
 def parse_file(file_path):

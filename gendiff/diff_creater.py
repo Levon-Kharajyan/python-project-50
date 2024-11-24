@@ -1,6 +1,3 @@
-from file_parser import parse_file
-
-
 def create_diff(data_1, data_2):
     diff = []
     keys = sorted(data_1.keys() | data_2.keys())
