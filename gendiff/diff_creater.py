@@ -12,6 +12,9 @@ def create_diff(data_1, data_2):
             child = create_diff(data_1[key], data_2[key])
             node = {'key': key, 'action': 'nested', 'children': child}
         else:
-            node = {'key': key, 'action': 'changed', 'value_old': data_1[key], 'value_new': data_2[key]}
+            node = {'key': key,
+                    'action': 'changed',
+                    'value_old': data_1[key],
+                    'value_new': data_2[key]}
         diff.append(node)
     return diff

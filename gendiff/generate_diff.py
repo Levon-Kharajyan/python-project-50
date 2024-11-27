@@ -2,6 +2,7 @@ from gendiff.file_parser import parse_file
 from gendiff.diff_creater import create_diff
 from gendiff.formatters.output_formatter import format_output
 
+
 def generate_diff(file_path_1, file_path_2):
     data_1 = parse_file(file_path_1)
     data_2 = parse_file(file_path_2)

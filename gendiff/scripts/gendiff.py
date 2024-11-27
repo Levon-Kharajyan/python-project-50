@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 
 import argparse
-from gendiff.generate_diff import generate_diff # noqa: F401
+from gendiff.generate_diff import generate_diff  # noqa: F401
 
 
-# Создаем константу DESCRIPTION, которую передадим в экземпляр парсера аргументов
+# Создаем константу, которую передадим в экземпляр парсера аргументов
 DESCRIPTION = 'Compares two configuration files and shows a difference.'
 
 
