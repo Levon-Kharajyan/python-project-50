@@ -25,4 +25,4 @@ test:
 test-cov:
 	poetry run pytest --cov=gendiff --cov-report xml
 
-.PHONY: install build check lint test test-cov
+.PHONY: install build check lint test test-cov gendiff
