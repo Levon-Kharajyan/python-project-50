@@ -12,7 +12,7 @@ def parse_argument():
     parser.add_argument('first_file')
     parser.add_argument('second_file')
     # Добавляем опциональные (необязательные) аргументы
-    parser.add_argument('-f', '--format', help='set format of output')
+    parser.add_argument('-f', '--format', help='set format of output', default='stylish')
     # Парсим аргументы
     args = parser.parse_args()
     return args

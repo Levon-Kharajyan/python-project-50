@@ -6,3 +6,4 @@
 ### Demo
 [Generate_diff_json](https://asciinema.org/a/C7HskESYD2ignkfBOHG1TPB3O)
 [Generate_diff_yaml](https://asciinema.org/a/E0lPEessj37uuouMScIDt72cb)
+[Stylish_nested_diff](https://asciinema.org/a/ZdDcx5nUTQ2rhLj4hYJl6FPpI)
