@@ -10,4 +10,6 @@
 
 [Stylish_nested_diff](https://asciinema.org/a/ZdDcx5nUTQ2rhLj4hYJl6FPpI)
 
-[Plain_nested_diff](https://asciinema.org/a/HxFkqKzfXvcTvqXvDaAycQvQk)
+[Plain_nested_diff](https://asciinema.org/a/HQFGEjmjnx5UNP7mELQ3WhiLT)
+
+[Json_format_diff](https://asciinema.org/a/uTSIXKDaMnA7xTbdwUFqGmaEj)

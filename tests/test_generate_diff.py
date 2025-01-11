@@ -2,10 +2,11 @@ import pytest
 from gendiff.generate_diff import generate_diff
 
 
-excepted_nested_diff_json = 'tests/fixtures/results/nested_json_diff_result.json'
-excepted_nested_diff_yaml = 'tests/fixtures/results/nested_yaml_diff_result.yaml'
-excepted_plain_diff_json = 'tests/fixtures/results/plain_json_diff_result.json'
-excepted_plain_diff_yaml = 'tests/fixtures/results/plain_yaml_diff_result.yaml'
+expected_nested_diff_json = 'tests/fixtures/results/nested_json_diff_result.json'
+expected_nested_diff_yaml = 'tests/fixtures/results/nested_yaml_diff_result.yaml'
+expected_plain_diff_json = 'tests/fixtures/results/plain_json_diff_result.json'
+expected_plain_diff_yaml = 'tests/fixtures/results/plain_yaml_diff_result.yaml'
+expected_json_form_diff = 'tests/fixtures/results/json_form_diff_result.json'
 
 
 @pytest.mark.parametrize(
@@ -13,20 +14,28 @@ excepted_plain_diff_yaml = 'tests/fixtures/results/plain_yaml_diff_result.yaml'
         [
             ('tests/fixtures/json_files/nested_file1.json',
              'tests/fixtures/json_files/nested_file2.json',
-             excepted_nested_diff_json,
+             expected_nested_diff_json,
              'stylish'),
             ('tests/fixtures/yaml_files/nested_file1.yaml',
              'tests/fixtures/yaml_files/nested_file2.yaml',
-             excepted_nested_diff_yaml,
+             expected_nested_diff_yaml,
              'stylish'),
             ('tests/fixtures/json_files/nested_file1.json',
              'tests/fixtures/json_files/nested_file2.json',
-             excepted_plain_diff_json,
+             expected_plain_diff_json,
              'plain'),
             ('tests/fixtures/yaml_files/nested_file1.yaml',
              'tests/fixtures/yaml_files/nested_file2.yaml',
-             excepted_plain_diff_yaml,
-             'plain')
+             expected_plain_diff_yaml,
+             'plain'),
+            ('tests/fixtures/json_files/nested_file1.json',
+             'tests/fixtures/json_files/nested_file2.json',
+             expected_json_form_diff,
+             'json'),
+            ('tests/fixtures/yaml_files/nested_file1.yaml',
+             'tests/fixtures/yaml_files/nested_file2.yaml',
+             expected_json_form_diff,
+             'json')
         ]
     )
 
