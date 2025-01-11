@@ -1,10 +1,10 @@
 from gendiff.file_parser import parse_file
 from gendiff.diff_creater import create_diff
 from gendiff.formatters.stylish import format_stylish_diff
-from gendiff.formatters.plane import format_plane_diff
+from gendiff.formatters.plain import format_plain_diff
 
 
-def generate_diff(file_path_1, file_path_2, format='stylish'):
+def generate_diff(file_path_1, file_path_2, format):
     data_1 = parse_file(file_path_1)
     data_2 = parse_file(file_path_2)
     diff = create_diff(data_1, data_2)
@@ -15,5 +15,5 @@ def generate_diff(file_path_1, file_path_2, format='stylish'):
 def select_formatters(data, format):
     if format == 'stylish':
         return format_stylish_diff(data)
-    elif format == 'plane':
-        return format_plane_diff(data)
+    elif format == 'plain':
+        return format_plain_diff(data)

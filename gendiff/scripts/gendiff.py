@@ -6,7 +6,7 @@ from gendiff.generate_diff import generate_diff  # noqa: F401
 
 def main():
     args = parse_argument()
-    diff = generate_diff(args.first_file, args.second_file)
+    diff = generate_diff(args.first_file, args.second_file, args.format)
     print(diff)
 
 

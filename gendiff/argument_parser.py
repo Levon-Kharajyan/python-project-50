@@ -14,6 +14,7 @@ def parse_argument():
     # Добавляем опциональные (необязательные) аргументы
     parser.add_argument('-f', '--format',
                         help='set format of output',
+                        choices=['stylish', 'plain'],
                         default='stylish')
     # Парсим аргументы
     args = parser.parse_args()
