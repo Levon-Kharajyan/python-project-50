@@ -14,12 +14,6 @@ def format_stylish_diff(data, depth=0):
 
 
 def format_node(data, depth):
-    """
-    This function formats the output of a node
-    representing the difference between two files
-    and returns a list of strings according to the output requirements.
-    Dictionaries are processed recursively.
-    """
     line = []
     if data['action'] == 'added':
         line.append(format_line(
@@ -49,11 +43,6 @@ def format_node(data, depth):
 
 
 def format_line(key, value, depth, char):
-    """
-    This function formats the output of the arguments
-    and returns a string representation as required.
-    Dictionaries are processed recursively.
-    """
     indent = INDENT_CHAR * depth
     line = []
     if isinstance(value, dict):
@@ -68,9 +57,6 @@ def format_line(key, value, depth, char):
 
 
 def format_dict(data, depth):
-    """
-    This function formats the dictionary output according to requirements.
-    """
     indent = INDENT_CHAR * depth
     line = []
     for key, value in data.items():
@@ -80,10 +66,6 @@ def format_dict(data, depth):
 
 
 def format_value(data):
-    """
-    This function formats the output of an argument depending on its type.
-    Dictionary values ​​are processed recursively.
-    """
     nested_dict = {}
     if isinstance(data, bool):
         return str(data).lower()
